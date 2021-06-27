@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top left, #8e44ad, #c0392b);
+}
+.game {
+  position: absolute;
+  padding: 0.5rem;
+  top: -4.5rem;
+  max-width: auto;
+  color: white;
+  background-color: rgba(31, 31, 31, 0.6);
+  border-radius: 45%;
+}
+.ort {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+}
+.hidden {
+  display: none !important;
+}
+
+.active {
+  background-color: rgb(196, 196, 196) !important;
+  border-radius: 1rem;
+  transition: all 0.75s ease;
+}
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 5rem !important;
+  color: rgb(199, 54, 95);
+}
+p {
+  font-size: 3.5rem;
+}
+span {
+  font-size: 2rem;
+  display: block;
+}
+i {
+  font-size: 2rem;
+}
+.row-height {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.player-1,
+.player-2 {
+  background-color: rgba(187, 177, 177, 0.5);
+}
+.font-active {
+  font-weight: 600;
+  text-shadow: 10px 8px 15px rgba(199, 54, 95, 0.9);
+  opacity: 1;
+}
+.font {
+  opacity: 0.6;
+}
+
+.current-1,
+.current-2 {
+  background-color: #c0392b;
+  align-self: center;
+  color: rgb(231, 231, 231);
+  font-weight: 100;
+}
+
+.result-1,
+.result-2 {
+  background-color: #c0392b;
+  align-self: center;
+  color: rgb(231, 231, 231);
+  font-weight: 100;
+}
+
+.opacity {
+  opacity: 0.7;
+}
+
+.button-group {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dice {
+  width: 5rem;
+  align-self: center;
+  filter: drop-shadow(5px 15px 10px rgba(97, 95, 95, 0.8));
+  transform: translateY(0%);
+}
+button {
+  opacity: 0.9;
+  padding: 2px;
+  border-radius: 20rem !important;
+}
+.btn-roll-dice {
+  transform: translateY(-50%);
+}
+.btn-hold {
+  margin-bottom: 2.5em;
+}
+.btn-new-game {
+  margin-bottom: 1em;
+}
+
+.win {
+  background-color: rgba(31, 31, 31, 0.856) !important;
+  color: rgb(255, 255, 255);
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.3);
+  }
+  20% {
+    transform: scale(1.6);
+  }
+  30% {
+    transform: scale(2);
+  }
+  40% {
+    transform: scale(2.3);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  60% {
+    transform: scale(2.3);
+  }
+  70% {
+    transform: scale(2);
+  }
+  80% {
+    transform: scale(1.6);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.scale-score {
+  animation: scale 3s ease-in;
+}
+@keyframes move {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.click-move {
+  animation-name: move;
+  animation-duration: 0.2s;
+}
+
+.margin {
+  margin-top: -6rem;
+}
